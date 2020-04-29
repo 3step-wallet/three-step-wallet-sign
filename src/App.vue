@@ -46,6 +46,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import SymbolService from '../service/SymbolService';
 
 export default Vue.extend({
   name: 'App',
@@ -57,5 +58,10 @@ export default Vue.extend({
   data: () => ({
     //
   }),
+
+  created() {
+    const a = SymbolService.mock();
+    console.log(a);
+  },
 });
 </script>
